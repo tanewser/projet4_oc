@@ -1,0 +1,18 @@
+.step {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 20px 0 32px;
+}
+.step-number {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+  border-radius: 24px;
+  background-color: #9356dc;
+  position: relative;
+  left: -12px;
+} /*# sourceMappingURL=index.css.map */
