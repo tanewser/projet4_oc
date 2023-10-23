@@ -4,19 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OhMyFood</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -25,15 +13,14 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/index.css" />
+
+    <link href="Lapalettedugoût.html" />
   </head>
 
   <body>
     <header class="header_contents">
       <i class="fa-solid fa-arrow-left header__arrow"></i>
-      <img
-        src="Images et textes Ohmyfood/images/logo/ohmyfood.png"
-        alt="ohmyfood(logo)"
-      />
+      <img src="./images/logo/ohmyfood.png" alt="ohmyfood(logo)" />
     </header>
     <!--------//RESERVATION//------------------>
     <section class="section__reservation direction-column">
@@ -61,7 +48,7 @@
     <!--------//FONCTIONNEMENTS//------------->
     <section class="section__fonctionnement">
       <h2 class="section__title">Fonctionnement</h2>
-      <div class="contents">
+      <div class="fonctionnement__contents">
         <div class="step">
           <span class="step-number">1</span>
           <i class="fa-solid fa-mobile-screen-button fonctionnement__icon"></i>
@@ -83,11 +70,11 @@
     <section class="section__restaurants">
       <h2 class="section__title">Restaurants</h2>
 
-      <div class="contents">
+      <div class="restaurants__contents">
         <a>
           <article class="card">
             <img
-              src="Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
               class="restaurants__photos"
             />
 
@@ -96,7 +83,9 @@
                 <h3 class="card-title">La palette du goût</h3>
                 <p class="card-subtitle">Ménilmontant</p>
               </div>
-              <i class="fa-regular fa-heart icon__like"></i>
+              <div class="icon__like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
             </div>
           </article>
           <div class="nouveau__button">Nouveau</div>
@@ -105,7 +94,7 @@
         <a>
           <article class="card">
             <img
-              src="Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+              src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
               class="restaurants__photos"
             />
             <div class="direction-row direction-row--cardtext">
@@ -122,11 +111,11 @@
         <a>
           <article class="card">
             <img
-              src="Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+              src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
               class="restaurants__photos"
             />
             <div class="direction-row direction-row--cardtext">
-              <div>
+              <div class="">
                 <h3 class="card-title">A la française</h3>
                 <p class="card-subtitle">Cité Rouge</p>
               </div>
@@ -138,7 +127,7 @@
         <a>
           <article class="card">
             <img
-              src="Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
               class="restaurants__photos"
             />
             <div class="direction-row direction-row--cardtext">
@@ -156,22 +145,23 @@
     </section>
     <!----------//FOOTER//-------------------->
     <footer class="section__footer">
-      <img src="Images et textes Ohmyfood/images/logo/ohmyfood.png" />
+      <h3 class="footer__title">ohmyfood</h3>
+      <div class="footer__contents">
+        <div class="footer__contents">
+          <div class="direction-row direction-row__footer">
+            <i class="fa-solid fa-utensils"></i>
+            <p class="footer__text--margin">Proposer un restaurant</p>
+          </div>
 
-      <div>
-        <div class="direction-row direction-row__footer">
-          <i class="fa-solid fa-utensils"></i>
-          <p class="footer__text--margin">Proposer un restaurant</p>
+          <div class="direction-row direction-row__footer">
+            <i class="fa-solid fa-handshake-simple"></i>
+            <p>Devenir partenaire</p>
+          </div>
         </div>
 
-        <div class="direction-row direction-row__footer">
-          <i class="fa-solid fa-handshake-simple"></i>
-          <p>Devenir partenaire</p>
-        </div>
+        <p>Mentions légales</p>
+        <p>Contact</p>
       </div>
-
-      <p>Mentions légales</p>
-      <p>Contact</p>
     </footer>
   </body>
 </html>
