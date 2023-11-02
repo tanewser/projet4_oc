@@ -13,13 +13,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/index.css" />
-
-    <link href="Lapalettedugoût.html" />
   </head>
 
   <body>
     <header class="header_contents">
-      <i class="fa-solid fa-arrow-left header__arrow"></i>
       <img src="./images/logo/ohmyfood.png" alt="ohmyfood(logo)" />
     </header>
     <!--------//RESERVATION//------------------>
@@ -41,9 +38,7 @@
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
       </div>
-      <button href="#" class="button__reservation--purple">
-        Explorer nos restaurants
-      </button>
+      <button href="#" class="button--purple">Explorer nos restaurants</button>
     </section>
     <!--------//FONCTIONNEMENTS//------------->
     <section class="section__fonctionnement">
@@ -71,7 +66,7 @@
       <h2 class="section__title">Restaurants</h2>
 
       <div class="restaurants__contents">
-        <a>
+        <a href="/restaurants/Lapalettedugoût.html" target="_blank">
           <article class="card">
             <img
               src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -84,7 +79,8 @@
                 <p class="card-subtitle">Ménilmontant</p>
               </div>
               <div class="icon__like">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart icon_heart-1"></i>
+                <i class="fa-solid fa-heart icon_heart-2"></i>
               </div>
             </div>
           </article>
@@ -102,7 +98,10 @@
                 <h3 class="card-title">La note enchantée</h3>
                 <p class="card-subtitle">Charonne</p>
               </div>
-              <div><i class="fa-regular fa-heart icon__like"></i></div>
+              <div class="icon__like">
+                <i class="fa-regular fa-heart icon_heart-1"></i>
+                <i class="fa-solid fa-heart icon_heart-2"></i>
+              </div>
             </div>
           </article>
           <div class="nouveau__button">Nouveau</div>
@@ -119,7 +118,10 @@
                 <h3 class="card-title">A la française</h3>
                 <p class="card-subtitle">Cité Rouge</p>
               </div>
-              <div><i class="fa-regular fa-heart icon__like"></i></div>
+              <div class="icon__like">
+                <i class="fa-regular fa-heart icon_heart-1"></i>
+                <i class="fa-solid fa-heart icon_heart-2"></i>
+              </div>
             </div>
           </article>
         </a>
@@ -136,7 +138,8 @@
                 <p class="card-subtitle">Folie-Méricourt</p>
               </div>
               <div class="icon__like">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart icon_heart-1"></i>
+                <i class="fa-solid fa-heart icon_heart-2"></i>
               </div>
             </div>
           </article>
@@ -145,18 +148,16 @@
     </section>
     <!----------//FOOTER//-------------------->
     <footer class="section__footer">
-      <h3 class="footer__title">ohmyfood</h3>
+      <h3 class="title">ohmyfood</h3>
       <div class="footer__contents">
-        <div class="footer__contents">
-          <div class="direction-row direction-row__footer">
-            <i class="fa-solid fa-utensils"></i>
-            <p class="footer__text--margin">Proposer un restaurant</p>
-          </div>
+        <div class="direction-row direction-row__footer">
+          <i class="fa-solid fa-utensils"></i>
+          <p class="footer__text--margin">Proposer un restaurant</p>
+        </div>
 
-          <div class="direction-row direction-row__footer">
-            <i class="fa-solid fa-handshake-simple"></i>
-            <p>Devenir partenaire</p>
-          </div>
+        <div class="direction-row direction-row__footer">
+          <i class="fa-solid fa-handshake-simple"></i>
+          <p>Devenir partenaire</p>
         </div>
 
         <p>Mentions légales</p>
