@@ -100,18 +100,8 @@ header img {
   top: 25px;
   color: $night-grey;
 }
-/*loader*/
 
-.loader {
-  background-color: $light-grey;
-  border-radius: 25px;
-  border: 3px dotted transparent;
-  border-top: $third-color;
-}
-.loader::before {
-}
-
-/*********/
+/********************/
 .search__bar {
   display: flex;
   flex-direction: row;
@@ -349,9 +339,12 @@ footer p {
 }
 .footer__text--margin {
   padding-left: 5px;
+  @media (min-width: 1024px) {
+    padding-left: 0;
+  }
 }
 
-/**********   MENUS    ************/
+/**********   PAGES des MENUS    ************/
 .container-image {
   height: 215px;
 }
@@ -359,6 +352,42 @@ footer p {
   width: 100%;
   height: 275px;
 }
+
+/*loader*/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $dark-grey;
+  opacity: 0.8;
+  z-index: 3;
+  animation: loading 850ms 100ms forwards;
+}
+@keyframes loading {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+.loading-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blueviolet;
+  font-size: 45px;
+  font-weight: 900;
+  position: relative;
+  top: 55%;
+  animation: loading 45ms 1ms 10ms ease-in-out;
+}
+
+/***/
 .restaurants--title {
   font-family: $title;
   font-size: 28px;
@@ -381,21 +410,41 @@ footer p {
   border-bottom: 3px solid $third-color;
   width: 40px;
   padding-bottom: 10px;
+
+  opacity: 0;
+  animation: card-slided 3s ease-in-out forwards;
 }
 
 .menu-contents {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-/*.menu-contents .card {
-  transition: transform 450ms ease-in-out;
-  opacity: 0.3;
-  &::after {
-    transform: ;
-    opacity: 1;
+  .card {
+    opacity: 0;
   }
-}*/
+  @for $i from 1 through 5 {
+    .card-#{$i} {
+      animation: card-slided 3s #{$i * 200}ms ease-in-out forwards;
+    }
+  }
+  // .card-1 {
+  //   animation: card-slided 450ms 500ms ease-in-out forwards;
+  // }
+  // .card-2 {
+  //   animation: card-slided 450ms 1s ease-in-out forwards;
+  // }
+}
+
+@keyframes card-slided {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .plate-and-price {
   display: flex;
@@ -417,25 +466,30 @@ footer p {
     transform: translateX(-80px);
   }
 }
-.fa-circle-check {
+.checked-container {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  color: white;
   background-color: $third-color;
-
-  font-size: 20px;
   width: 70px;
   height: 71px;
-
   border-radius: 0 15px 15px 0;
   position: relative;
   margin-right: -80px;
 }
 
+.fa-circle-check {
+  color: white;
+  font-size: 20px;
+
+  transition: transform 100ms;
+  transition-delay: 15ms;
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
 .button--to-order {
   display: flex;
   justify-content: center;
-  /* margin: 0 20px 20px 20px;*/
 }
