@@ -1,0 +1,129 @@
+/*LES KEYFRAMES & LES ANIMATIONS*/
+
+/*loader*/
+@keyframes loading-1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes rounded {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+/*cartes pages des restaurants*/
+@keyframes card-slided {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes checked {
+  /*prix*/
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+///////////// LES ANIMATIONS ///////////////
+
+/**************    LOADER    **************/
+
+.loader-content {
+  //fond du loader
+  background-color: $dark-grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 3;
+  animation: loading-1 3s forwards;
+
+  .loader {
+    //création du loader
+    background-color: $dark-grey;
+    border: 10px solid transparent;
+    border-left: 10px solid #ff79da;
+    border-right: 10px solid violet;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+
+    //positionnement
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 3;
+    //animation
+    animation: rounded 550ms linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+/******** LE COEUR QUI S'ANIME *********/
+
+//création du coeur
+.icon_heart-1 {
+  font-size: 30px;
+  position: absolute;
+}
+.icon_heart-2 {
+  font-size: 30px;
+  background-clip: text;
+  color: transparent;
+  background-image: white;
+}
+//Animation du coeur avec un hover
+.icon__like {
+  transition: all 400ms ease-in-out;
+  &:hover {
+    background-clip: text;
+    color: transparent;
+    background-image: $button-gradient;
+    font-weight: bolder;
+    opacity: 1;
+  }
+}
+
+/*******    CARTES DES RESTAURANTS (page d'accueil)     *******/
+.section__restaurants {
+  .card {
+    transition: transform 350ms ease;
+    transition-delay: 150ms;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 10px 0px #ff79da;
+    }
+  }
+}
+
+/*******    CARTES DES MENUS (page des restaurants)     *******/
+.menu-contents {
+  @for $i from 1 through 9 {
+    .card-#{$i} {
+      animation: card-slided 2s #{$i * 450}ms ease-in-out forwards;
+    }
+  }
+}
