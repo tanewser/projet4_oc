@@ -1,0 +1,137 @@
+/*LES KEYFRAMES & LES ANIMATIONS*/
+/*loader*/
+@keyframes loading-1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes rounded {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-360deg);
+    opacity: 0;
+    display: none;
+  }
+}
+/*cartes pages des restaurants*/
+@keyframes card-slided {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes checked {
+  /*prix*/
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/**************    LOADER    **************/
+.loader-content {
+  background-color: #eaeaea;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 3;
+  animation: loading-1 3s forwards;
+}
+.loader-content .loader {
+  background-color: #eaeaea;
+  border: 10px solid transparent;
+  border-left: 10px solid #ff79da;
+  border-right: 10px solid violet;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 3;
+  animation: rounded 550ms linear;
+  animation-fill-mode: forwards;
+}
+
+/******** LE COEUR QUI S'ANIME *********/
+.icon_heart-1 {
+  font-size: 30px;
+  position: absolute;
+}
+
+.icon_heart-2 {
+  font-size: 30px;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: white;
+}
+
+.icon__like {
+  transition: all 400ms ease-in-out;
+}
+.icon__like:hover {
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  font-weight: bolder;
+  opacity: 1;
+}
+
+/*******    CARTES DES RESTAURANTS (page d'accueil)     *******/
+.section__restaurants .card {
+  transition: transform 350ms ease;
+  transition-delay: 150ms;
+}
+.section__restaurants .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px 0px #ff79da;
+}
+
+/*******    CARTES DES MENUS (page des restaurants)     *******/
+.menu-contents .card-1 {
+  animation: card-slided 2s 450ms ease-in-out forwards;
+}
+.menu-contents .card-2 {
+  animation: card-slided 2s 900ms ease-in-out forwards;
+}
+.menu-contents .card-3 {
+  animation: card-slided 2s 1350ms ease-in-out forwards;
+}
+.menu-contents .card-4 {
+  animation: card-slided 2s 1800ms ease-in-out forwards;
+}
+.menu-contents .card-5 {
+  animation: card-slided 2s 2250ms ease-in-out forwards;
+}
+.menu-contents .card-6 {
+  animation: card-slided 2s 2700ms ease-in-out forwards;
+}
+.menu-contents .card-7 {
+  animation: card-slided 2s 3150ms ease-in-out forwards;
+}
+.menu-contents .card-8 {
+  animation: card-slided 2s 3600ms ease-in-out forwards;
+}
+.menu-contents .card-9 {
+  animation: card-slided 2s 4050ms ease-in-out forwards;
+}/*# sourceMappingURL=keyframes_animies.css.map */
