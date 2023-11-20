@@ -17,7 +17,6 @@ a {
 }
 .section__title {
   font-size: 24px;
-
   font-weight: $text--bolder;
 }
 /////////
@@ -49,12 +48,14 @@ a {
     font-size: 18px;
     font-weight: $text--bolder;
     margin: 0;
+    text-overflow: ellipsis;
   }
 
   .card-subtitle {
     font-size: 17px;
     font-weight: 300;
     margin: 0;
+    text-overflow: ellipsis;
   }
 }
 
@@ -65,17 +66,17 @@ a {
   justify-content: center;
   align-items: center;
   padding: 15px;
+  .__arrow {
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+    top: 25px;
+    color: $night-grey;
+  }
 }
 .ohmyfood {
   /*LOGO*/
   height: 36px;
-}
-.header__arrow {
-  position: absolute;
-  left: 20px;
-  font-size: 20px;
-  top: 25px;
-  color: $night-grey;
 }
 
 /****************** / SECTION : RESERVATION / **********************/
@@ -330,9 +331,12 @@ footer p {
   }
 
   .page-of-restaurants {
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
     gap: 30px;
+    @media (min-width: 1024px) {
+      justify-content: center;
+    }
 
     .restaurants--title {
       font-family: $title;
@@ -342,6 +346,7 @@ footer p {
     }
   }
 }
+
 .section-menu {
   padding: 20px;
 
@@ -361,67 +366,66 @@ footer p {
       margin: auto;
     }
   }
-}
 
-.menu-contents {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 30px;
-
-  .card {
-    box-shadow: $shadow;
-    opacity: 0;
-  }
-  &:hover {
-    .fa-circle-check {
-      animation: checked 1s linear;
-    }
-  }
-
-  .plate-and-price {
+  .menu-contents {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
 
-    overflow: hidden;
-
-    .choice {
-      padding: 15px;
-
-      .menu-description {
-        font-size: 15px;
-        overflow: hidden;
+    .card {
+      box-shadow: $shadow;
+      opacity: 0;
+    }
+    &:hover {
+      .fa-circle-check {
+        animation: checked 1s linear;
       }
     }
-    .price {
-      gap: 20px;
-      align-items: baseline;
-      transition: transform 350ms;
-      transition-delay: 300ms;
-      &:hover {
-        transform: translateX(-80px);
+
+    .plate-and-price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+
+      overflow: hidden;
+
+      .choice {
+        padding: 15px;
+
+        .menu-description {
+          font-size: 15px;
+          overflow: hidden;
+        }
       }
-      .checked-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $third-color;
-        width: 70px;
-        height: 71px;
-        border-radius: 0 15px 15px 0;
-        position: relative;
-        margin-right: -80px;
-        .fa-circle-check {
-          color: white;
-          font-size: 20px;
+      .price {
+        gap: 20px;
+        align-items: baseline;
+        transition: transform 350ms;
+        transition-delay: 300ms;
+        &:hover {
+          transform: translateX(-80px);
+        }
+        .checked-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $third-color;
+          width: 70px;
+          height: 71px;
+          border-radius: 0 15px 15px 0;
+          position: relative;
+          margin-right: -80px;
+          .fa-circle-check {
+            color: white;
+            font-size: 20px;
+          }
         }
       }
     }
   }
 }
-
 .button-to-order {
   display: flex;
   justify-content: center;
