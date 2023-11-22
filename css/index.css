@@ -7,7 +7,8 @@
   }
   100% {
     opacity: 0;
-    display: none;
+    /*width: 0;
+    height: 0;*/
   }
 }
 @keyframes rounded {
@@ -51,16 +52,10 @@
   bottom: 0;
   margin: auto;
   z-index: 3;
+  pointer-events: none;
   animation: loading-1 3s forwards;
 }
 .loader-content .loader {
-  background-color: #eaeaea;
-  border: 10px solid transparent;
-  border-left: 10px solid #ff79da;
-  border-right: 10px solid violet;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -68,6 +63,14 @@
   bottom: 0;
   margin: auto;
   z-index: 3;
+  pointer-events: none;
+  background-color: #eaeaea;
+  border: 10px solid transparent;
+  border-left: 10px solid #ff79da;
+  border-right: 10px solid violet;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
   animation: rounded 550ms linear;
   animation-fill-mode: forwards;
 }
@@ -187,12 +190,14 @@ a {
   font-weight: 900;
   margin: 0;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 .card .card-subtitle {
   font-size: 17px;
   font-weight: 300;
   margin: 0;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /********************* / HEADER / **********************/
@@ -472,8 +477,6 @@ footer p {
 }
 @media (min-width: 1024px) {
   .page-menu {
-    display: block;
-    justify-content: center;
     margin: 0% 10%;
     padding: 0% 10%;
   }
@@ -523,14 +526,15 @@ footer p {
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
+  white-space: nowrap;
   overflow: hidden;
 }
 .section-menu .menu-contents .plate-and-price .choice {
   padding: 15px;
+  overflow: hidden;
 }
 .section-menu .menu-contents .plate-and-price .choice .menu-description {
   font-size: 15px;
-  overflow: hidden;
 }
 .section-menu .menu-contents .plate-and-price .price {
   gap: 20px;

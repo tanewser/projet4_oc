@@ -49,6 +49,7 @@ a {
     font-weight: $text--bolder;
     margin: 0;
     text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .card-subtitle {
@@ -56,6 +57,7 @@ a {
     font-weight: 300;
     margin: 0;
     text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 
@@ -324,8 +326,6 @@ footer p {
   z-index: 2;
 
   @media (min-width: 1024px) {
-    display: block;
-    justify-content: center;
     margin: 0% 10%;
     padding: 0% 10%;
   }
@@ -356,8 +356,8 @@ footer p {
     border-bottom: 3px solid $third-color;
     width: 40px;
     padding-bottom: 10px;
-
     opacity: 0;
+    // apparition de l'entête
     animation: card-slided 2s 400ms ease-out forwards;
   }
 
@@ -381,15 +381,14 @@ footer p {
       flex-direction: row;
       justify-content: space-between;
       align-items: end;
-
+      white-space: nowrap;
       overflow: hidden;
 
       .choice {
         padding: 15px;
-
+        overflow: hidden;
         .menu-description {
           font-size: 15px;
-          overflow: hidden;
         }
       }
       .price {
