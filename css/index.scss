@@ -396,6 +396,7 @@ footer p {
       .price {
         gap: 20px;
         align-items: baseline;
+        cursor: pointer;
         transition: transform 350ms ease-in-out;
         transition-delay: 250ms;
         &:hover {
