@@ -528,19 +528,20 @@ footer p {
   align-items: end;
   white-space: nowrap;
   overflow: hidden;
+  gap: 70px;
 }
-.section-menu .menu-contents .plate-and-price .choice {
+.section-menu .menu-contents .plate-and-price .plate {
   padding: 15px;
   overflow: hidden;
 }
-.section-menu .menu-contents .plate-and-price .choice .menu-description {
+.section-menu .menu-contents .plate-and-price .plate .menu-description {
   font-size: 15px;
 }
 .section-menu .menu-contents .plate-and-price .price {
   gap: 20px;
   align-items: baseline;
-  transition: transform 350ms;
-  transition-delay: 300ms;
+  transition: transform 350ms ease-in-out;
+  transition-delay: 250ms;
 }
 .section-menu .menu-contents .plate-and-price .price:hover {
   transform: translateX(-80px);
@@ -551,12 +552,12 @@ footer p {
   align-items: center;
   background-color: #99e2d0;
   width: 70px;
-  height: 71px;
+  height: 70px;
   border-radius: 0 15px 15px 0;
   position: relative;
   margin-right: -80px;
 }
-.section-menu .menu-contents .plate-and-price .price .checked-container .fa-circle-check {
+.section-menu .menu-contents .plate-and-price .price .fa-circle-check {
   color: white;
   font-size: 20px;
 }

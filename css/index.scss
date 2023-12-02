@@ -383,36 +383,39 @@ footer p {
       align-items: end;
       white-space: nowrap;
       overflow: hidden;
+      gap: 70px;
 
-      .choice {
+      .plate {
         padding: 15px;
         overflow: hidden;
         .menu-description {
           font-size: 15px;
         }
       }
+
       .price {
         gap: 20px;
         align-items: baseline;
-        transition: transform 350ms;
-        transition-delay: 300ms;
+        transition: transform 350ms ease-in-out;
+        transition-delay: 250ms;
         &:hover {
           transform: translateX(-80px);
         }
+
         .checked-container {
           display: flex;
           justify-content: center;
           align-items: center;
           background-color: $third-color;
           width: 70px;
-          height: 71px;
+          height: 70px;
           border-radius: 0 15px 15px 0;
           position: relative;
           margin-right: -80px;
-          .fa-circle-check {
-            color: white;
-            font-size: 20px;
-          }
+        }
+        .fa-circle-check {
+          color: white;
+          font-size: 20px;
         }
       }
     }
